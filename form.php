@@ -19,6 +19,6 @@ if($run == TRUE){
 <a href="excel.php">Download EXCEL</a>
 <?php
 }else
-echo "Error!!";
+echo "Error!!!!!!";
 }
 ?>
