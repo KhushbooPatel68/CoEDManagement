@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>COMPLAINT</title>
+<link rel="stylesheet" href="navigation.css">
+<style type="text/css">
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=file] ,textarea{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=file]:focus ,textarea{
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.btn {
+  padding: 14px 20px;
+  background-color: green;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.btn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.marg
+{
+margin-left:400px;
+margin-right:400px;
+}
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 10px) {
+  .btn {
+     width: 50%;
+  }
+}
+</style>
+</head>
+<body>
+<!-- ------------------------------Navigation bar-------------------------------->
+<div class="topnav" id="myTopnav">
+  <a href="main_project.html" class="actives"><b>Home</b></a>
+  <a href="complaint.html"><b>Complaint</b></a>
+  <a href="admin.html"><b>Admin</b></a>
+  <a href="contact.html"><b>Contact</b></a>
+ 
+  <div class="dropdown">
+    <button class="dropbtn"><b>Menu</b>
+      <i class="downn"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="login.html"><b>Login</b></a>
+      <a href="main_project.html"><b>Logout</b></a>
+      </div>
+  </div>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+<!--
+<div style="padding-left:16px">
+  <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+</div>
+
+-->
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+</br>
+<div class="marg">
+  <span style="align: center"><h3>COMPLAINT REGISTRATION</h3></span></br>
+<form action="form.php" method="POST" enctype="multipart/form-data" style="border:1px solid #ccc">
+<div class="container">
+<label for="leave">Type of leave: </label>
+<select name="leave" id="leave">
+  <option value="Casual Leave">Casual Leave</option>
+  <option value="Duty Leave">Duty Leave</option>
+  <option value="General/Additional Leave">General/Additional Leave</option>
+  <option value="LWP Leave">LWP Leave</option>
+</select>
+<label for="uname"><b>Name</b>(Only in Capital)</label>
+<input type="text" placeholder="Only in Capital" name="uname" required="">
+<label for="disc">Select Discipline: </label>
+<select name="disc" id="disc">
+  <option value="P.hD">P.hD</option>
+  <option value="M.Tech.">M.Tech.</option>
+</select>
+<label for="branch"><b>Branch</b>(Only in Capital)</label>
+<input type="text" placeholder="Only in Capital" name="branch" required="">
+<label for="adno"><b>Addmission No.</b>(Only in Capital)</label>
+<input type="text" placeholder="Only in Capital" name="adno" required="">
+<label for="from">From Date:</label>
+  <input type="date" id="fromdate" name="fromdate">
+  <label for="to">To Date::</label>
+  <input type="date" id="todate" name="todate">
+<label for="reas"><b>Reason for Leave</b></label>
+<textarea placeholder="MAximum Limit 100 words" name="reas" required=""></textarea>
+<div class="clearfix">
+<button type="submit" name="submit" class="btn" value="upload">Submit</button>
+</div>
+</div>
+</form>
+</div>
+</body>
+</html>
